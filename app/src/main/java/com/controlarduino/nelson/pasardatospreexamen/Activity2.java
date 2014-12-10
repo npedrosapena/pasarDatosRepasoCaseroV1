@@ -48,7 +48,7 @@ public class Activity2 extends ListActivity //ESTA CLASE EXTIENDE DE LISTACTIVIT
         Intent intento= new Intent(Activity2.this,Activity3.class);
         Bundle bundle= new Bundle();
 
-        Contactos contacto= Activity1.agenda.buscarContacto(position); //recogemos la agenda del activity1
+        Contactos contacto= Activity1.agenda.buscarContacto(position); //recogemos la agenda del activity1, position nos lo dá automaticamente android (fijarse en los parametros que entran)
 
         bundle.putSerializable("Posicion",position);//pasamos la posicion del elemento en la lista que es la misma que el array
         bundle.putSerializable("Contacto",contacto); //guardamos nuestro contacto en la cajita
@@ -71,6 +71,7 @@ public class Activity2 extends ListActivity //ESTA CLASE EXTIENDE DE LISTACTIVIT
         //con la agenda del activity1 y acceder al método que devuelve un array de datos
         //con los datos de la  misma. luego, usamos el método mágico para recargar
         //los datos de los contactos
+
         setListAdapter(new ArrayAdapter<Contactos>(this,android.R.layout.simple_list_item_1,agenda.arrayContactos()));
     }
 
