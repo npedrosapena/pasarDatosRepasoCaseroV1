@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -94,6 +95,13 @@ public class Activity3 extends ActionBarActivity {
     public void mensaje(int msg)
     {
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    //este método se ejecuta cuando el activity al que llamamos en el intent nos devuelve un ok
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+
     }
 
     @Override
