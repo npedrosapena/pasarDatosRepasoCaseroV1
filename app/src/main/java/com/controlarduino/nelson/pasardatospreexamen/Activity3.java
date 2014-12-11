@@ -62,6 +62,32 @@ public class Activity3 extends ActionBarActivity {
         });
 
 
+        /******************************************************/
+        /******             ZONA     EXAMEN           *********/
+        /******************************************************/
+
+        //instanciamos el botón borrar
+        Button btnBorrar=(Button)findViewById(R.id.btnMostrarBorrar);
+
+        btnBorrar.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intento2 = new Intent(Activity3.this,ActivityBorrar.class);
+                Bundle bundle= new Bundle();
+
+                bundle.putSerializable("Contacto",contacto);
+                bundle.putSerializable("Posicion",Integer.parseInt(intento.getSerializableExtra("Posicion").toString()));
+
+                intento2.putExtras(bundle);
+
+                startActivityForResult(intento2,1);
+
+            }
+        });
+
+
 
     }
 
