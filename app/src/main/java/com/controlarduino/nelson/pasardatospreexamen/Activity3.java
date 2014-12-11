@@ -48,7 +48,7 @@ public class Activity3 extends ActionBarActivity {
             @Override
             public void onClick(View v)
             {
-                //cambiamos el nombre y telefono del contacto
+                //cambiamos el nombre y telefono del contacto.
                 contacto.setNombre(txtEditarNombre.getText().toString());
                 contacto.setTelefono(Integer.parseInt(txtEditarTelefono.getText().toString()));
 
