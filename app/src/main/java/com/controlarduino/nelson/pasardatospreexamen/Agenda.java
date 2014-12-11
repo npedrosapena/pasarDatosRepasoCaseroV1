@@ -1,5 +1,7 @@
 package com.controlarduino.nelson.pasardatospreexamen;
 
+import android.widget.Toast;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -8,7 +10,7 @@ import java.util.ArrayList;
  */
 public class Agenda implements Serializable
 {
-    static ArrayList<Contactos> lista= new ArrayList<Contactos>(); //array donde guardamos los contactos
+     final static ArrayList<Contactos> lista= new ArrayList<Contactos>(); //array donde guardamos los contactos
 
     public Agenda(){} //constructor
 
@@ -43,5 +45,16 @@ public class Agenda implements Serializable
     public Integer longitud()
     {
         return lista.size();
+    }
+
+    public boolean BorrarContacto(Contactos posicionBorrado)
+    {
+            if(this.lista.remove(posicionBorrado)==true)
+            {
+                return true;
+            }
+
+            return false;
+
     }
 }
