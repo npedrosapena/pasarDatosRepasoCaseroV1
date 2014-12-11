@@ -12,4 +12,7 @@
     <string name="btnGuardar">Guardar</string>
     <string name="GuardadoCorrectamente">Guardado correctamente</string>
     <string name="ErrorGuardado">Se produjo un error al guardar</string>
+    <string name="title_activity_activity_borrar">ActivityBorrar</string>
+    <string name="btnBorrar">Borrar</string>
+
 </resources>
